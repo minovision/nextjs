@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import Link from "next/link";
 import { useContext } from "react";
 import { UserContext } from "../lib/context";
+import { auth } from "../lib/firebase";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,7 +42,14 @@ const ButtonAppBar = () => {
           {username && (
             <>
               <li class="no-bullets">
-                <Button variant="contained" color="primary" disableElevation>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  disableElevation
+                  onClick={() => {
+                    auth.signOut();
+                  }}
+                >
                   Sign Out
                 </Button>
               </li>

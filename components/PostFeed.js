@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const PostFeed = ({ posts, admin }) => {
+  console.log(`x: ${posts}`);
   return posts
     ? posts.map((e) => {
         <PostItem post={e} key={post.slug} admin={admin} />;

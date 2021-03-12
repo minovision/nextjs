@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const UserProfile = ({ user }) => {
-  console.log(`userprofile: ${user}`);
+  // console.log(user);
   const classes = useStyles();
   return (
     <div className={classes.root}>
